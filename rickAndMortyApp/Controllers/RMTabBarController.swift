@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+/// Controller to house tabs and root tab controllers
 class RMTabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -20,10 +22,10 @@ class RMTabBarController: UITabBarController {
         let characters = RMCharactersViewController()
         let locations = RMLocationsViewController()
         
-        let nav1 = UINavigationController(rootViewController: settings)
-        let nav2 = UINavigationController(rootViewController: episodes)
-        let nav3 = UINavigationController(rootViewController: characters)
-        let nav4 = UINavigationController(rootViewController: locations)
+        let nav1 = UINavigationController(rootViewController: episodes)
+        let nav2 = UINavigationController(rootViewController: characters)
+        let nav3 = UINavigationController(rootViewController: locations)
+        let nav4 = UINavigationController(rootViewController: settings)
         
         for nav in [nav1, nav2, nav3, nav4] {
             nav.navigationItem.largeTitleDisplayMode = .automatic
